@@ -3,7 +3,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 
 def preprocess():
-    df = pd.read_csv("data/raw/air_quality.csv")
+    df = pd.read_csv("data/raw/city_day.csv")
 
     X = df.drop("AQI", axis=1)
     y = df["AQI"]
@@ -16,7 +16,7 @@ def preprocess():
     processed = pd.DataFrame(X_scaled, columns=X.columns)
     processed["AQI"] = y
 
-    processed.to_csv("data/processed/air_quality_processed.csv", index=False)
+    processed.to_csv("data/raw/city_day.csv", index=False)
 
 if __name__ == "__main__":
     preprocess()

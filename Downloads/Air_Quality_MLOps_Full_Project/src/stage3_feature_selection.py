@@ -4,7 +4,7 @@ from sklearn.feature_selection import SelectKBest, f_regression
 
 mlflow.set_experiment("Feature_Selection")
 
-df = pd.read_csv("data/processed/air_quality_processed.csv")
+df = pd.read_csv("data/raw/city_day.csv")
 X = df.drop("AQI", axis=1)
 y = df["AQI"]
 

@@ -15,7 +15,7 @@ def ingest_data():
     }
 
     df = pd.DataFrame(data)
-    df.to_csv("data/raw/air_quality.csv", index=False)
+    df.to_csv("data/raw/city_day.csv", index=False)
 
 if __name__ == "__main__":
     ingest_data()

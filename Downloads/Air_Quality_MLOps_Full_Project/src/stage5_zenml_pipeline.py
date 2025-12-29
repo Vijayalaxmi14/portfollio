@@ -12,7 +12,7 @@ import mlflow
 # ---------------- STEP 1: Load Data ----------------
 @step
 def load_data():
-    df = pd.read_csv("data/processed/air_quality_processed.csv")
+    df = pd.read_csv("data/raw/city_day.csv")
     X = df.drop("AQI", axis=1)
     y = df["AQI"]
     return train_test_split(X, y, test_size=0.2, random_state=42)
